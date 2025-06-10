@@ -8,6 +8,8 @@ from datetime import datetime, timedelta # Ensure datetime is imported from date
 from typing import List, Dict, Any, Optional # For type hinting
 from pydantic import BaseModel # For request/response models (optional but good practice)
 import os
+from dotenv import load_dotenv # For loading environment variables
+load_dotenv() # Load environment variables from .env file
 from contextlib import asynccontextmanager
 import polyline # Add this import
 
@@ -20,7 +22,7 @@ print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "traffic_speed_predictor_xgb.joblib")
 
-MONGO_ATLAS_CONNECTION_STRING = "mongodb+srv://arishit:abc@ghack.nbdc0fg.mongodb.net/" # !!! REPLACE !!!
+MONGO_ATLAS_CONNECTION_STRING = os.getenv("MONGO_ATLAS_CONNECTION_STRING")
 DATABASE_NAME = "manchester_traffic"
 COLLECTION_NAME = "traffic_readings" # This collection will be used for historical data too
 
