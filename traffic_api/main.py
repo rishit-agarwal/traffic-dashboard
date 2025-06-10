@@ -37,7 +37,7 @@ app = FastAPI(
 origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "https://traffic-dashboard-one.vercel.app/"
+    "https://traffic-dashboard-one.vercel.app"
         # Default React dev port
     # Add your deployed frontend URL here
 ]
