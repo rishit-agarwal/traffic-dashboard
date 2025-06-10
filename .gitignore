@@ -1,0 +1,42 @@
+# .gitignore in c:\GoogleHack\
+
+# User-specified folder to ignore
+ignore/
+**/ignore/
+
+# Node / React (Frontend - assuming it's in a subfolder like 'traffic-frontend')
+traffic-frontend/node_modules/
+traffic-frontend/build/
+traffic-frontend/.pnp
+traffic-frontend/.pnp.js
+traffic-frontend/coverage/
+traffic-frontend/npm-debug.log*
+traffic-frontend/yarn-debug.log*
+traffic-frontend/yarn-error.log*
+traffic-frontend/.DS_Store
+traffic-frontend/.env
+traffic-frontend/.env.local
+traffic-frontend/.env.development.local
+traffic-frontend/.env.test.local
+traffic-frontend/.env.production.local
+
+# Python / FastAPI (Backend - assuming it's in a subfolder like 'traffic_api')
+traffic_api/__pycache__/
+traffic_api/*.pyc
+traffic_api/.env
+traffic_api/venv/
+traffic_api/.venv/
+traffic_api/env/
+traffic_api/ENV/
+traffic_api/.idea/
+traffic_api/.vscode/
+traffic_api/*.joblib # If your model is large and you prefer not to commit it directly
+                     # (though for deployment, it needs to be accessible)
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE-specific
+.vscode/
+.idea/
