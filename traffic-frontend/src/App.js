@@ -32,7 +32,7 @@ ChartJS.register(
 
 
 const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY // !!! REPLACE THIS !!!
-const API_BASE_URL = "http://localhost:8000"; // Your FastAPI backend URL
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL|| "http://localhost:8000"; // Your FastAPI backend URL
 
 const mapContainerStyle = {
   width: '100vw',
