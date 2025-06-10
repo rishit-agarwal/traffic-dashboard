@@ -36,7 +36,9 @@ app = FastAPI(
 # --- CORS (Cross-Origin Resource Sharing) ---
 origins = [
     "http://localhost:3000",
-    "http://127.0.0.1:3000"  # Default React dev port
+    "http://127.0.0.1:3000",
+    "https://traffic-dashboard-one.vercel.app/"
+        # Default React dev port
     # Add your deployed frontend URL here
 ]
 app.add_middleware(
